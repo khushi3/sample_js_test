@@ -21,5 +21,10 @@ describe("calc",function(){
     it("should handle negative delimiters",function() {
         expect(calc.add("3,2,-10")).toEqual(15);
     })
+    it("should ignore numbers greater than 1003",function() {
+        expect(calc.add("3,2,1300")).toEqual(5);
+    })
+
+
 });
 
