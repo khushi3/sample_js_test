@@ -2,6 +2,11 @@ describe("calc",function(){
    it("should support empty string",function() {
        expect(calc.add("")).toEqual(0);
    });
-    it("")
+    it("should support more than 2 numbers ",function () {
+     expect(calc.add("3,2,10")).toEqual(15);
+    })
+    it("should handle newline delimiters",function() {
+        expect(calc.add("3,2\n10")).toEqual(15);
+    })
 });
 
