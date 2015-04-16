@@ -17,7 +17,9 @@ describe("calc",function(){
 
     it("should handle newline delimiters",function() {
         expect(calc.add("3,2\n10")).toEqual(15);
+    });
+    it("should handle negative delimiters",function() {
+        expect(calc.add("3,2,-10")).toEqual(15);
     })
-
 });
 
